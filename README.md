@@ -7,8 +7,7 @@ rates, probabilistic crew events, and integrates live NASA
 APIs for asteroid tracking and Mars rover imagery.
 
 ## 🌍 Live Demo
-[Add your GitHub Pages link here once deployed]
-
+(https://vishnu4code.github.io/mars_habitat_simulator)
 ## Features
 - Real-time resource management (water, oxygen, food, energy)
 - Crew morale system affecting mission outcome
