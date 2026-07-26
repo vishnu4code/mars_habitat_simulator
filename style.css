@@ -1,0 +1,178 @@
+*{box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: #000;
+    color: #e2e8f0;
+    font-family: 'Courier New', monospace;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px 10px;
+    border-bottom: 1px solid #1e3a5f;
+}
+
+header h1 {font-size: 2rem; color: #facc15; letter-spacing: 2px;}
+.subtitle {color: #94a3b8; font-size: 0.9rem; margin-top: 6px;}
+
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#controls {
+    background: #0f172a;
+    border: 1px solid #1e3a5f;
+    border-radius: 12px;
+    padding: 20px;
+    width: 240px;
+    flex-shrink: 0;
+}
+#controls h2 {color: #facc15; margin-bottom: 16px; font-size: 1rem;}
+#controls label {
+    display: block;
+    color: #94a3b8;
+    font-size:0.75rem;
+    margin-top: 12px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+#controls input {
+    width: 100%;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    color: #facc15;
+    padding: 6px 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+#controls input:focus {outline: none; border-color: #facc15;}
+
+#runBtn{
+    margin-top: 20px;
+    width:100%;
+    background: #facc15;
+    color:#000;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+}
+#runBtn:hover {background: #fde047;}
+
+#dashboard {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#resource-bars {
+    background: #0f172a;
+    border: 1px solid #1e3a5f;
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+#resource-bars h2 { color: #facc15; margin-bottom: 14px; font-size: 1rem; }
+
+.bar-row{
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+.bar-row > span:first-child { width: 80px; color: #94a3b8;}
+.bar-row > span:last-child {width: 80px;text-align:center; color:#facc15; font-size: 0.8rem;}
+
+.bar-wrap {
+    flex: 1;
+    background: #1e293b;
+    border-radius: 999px;
+    height: 10px;
+    overflow: hidden;
+}
+.bar {
+    height:100%;
+    border-radius: 999px;
+    width: 100%;
+    background: #22c55e;
+    transition: width 0.5s ease, background 0.5s ease;
+}
+
+#mission-status {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #0f172a;
+    border: 1px solid #1e3a5f;
+    border-radius: 12px;
+    padding: 12px 20px;
+}
+#day-counter {color: #facc15; font-size: 1.1rem; font-weight: bold;}
+#status-badge {
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight:bold;
+    letter-spacing: 1px;
+    background: #334155;
+    color: #94a3b8;
+}
+#status-badge.active {background: #166534; color:#86efac;}
+#status-badge.warning{background:#854d0e; color: #fde047;}
+#status-badge.failed{background: #7f1d1d; color: #fca5a5;}
+#status-badge.success{background: #14532d; color: #4ade80;}
+
+
+#event-log {
+    background: #0f172a;
+    border: 1px solid #1e3a5f;
+    border-radius: 12px;
+    padding: 16px 20px;
+    max-height: 220px;
+    overflow-y: auto;
+    flex:1;
+}
+#event-log h2{color: #facc15; margin-bottom: 10px; font-size: 1rem;}
+#log-entries {font-size: 0.8rem; line-height: 1.7; color: #cbd5e1;}
+.log-day {color: #facc15; font-weight: bold; margin-top: 8px;}
+.log-event {color: #f97316;}
+.log-warning {color: #fbbf24;}
+.log-failure {color:#ef4444; font-weight: bold;}
+.log-success {color:#4ade80; font-weight: bold;}
+#chart-section{
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    background: #0f172a;
+    border: 1px solid #1e3a5f;
+    border-radius: 12px;
+    padding: 20px;
+}
+#chart-section h2 {color: #facc15; margin-bottom: 16px; font-size: 1rem; }
+#resourceChart {max-height: 300px;}
+
+#nasa-panel {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background: #0f172a;
+    border: 1px solid #1e3a5f;
+    border-radius: 12px;
+}
+#nasa-panel h2 {color: #facc15; margin-bottom: 14px; font-size: 1rem;}
+#mars-weather {color: #7dd3fc; font-size: 0.85rem; line-height:1.8;}
+#asteroid-alert {color: #f97316; font-size: 0.85rem; margin-top: 10px;}
+#rover-photo {max-width: 100%; border-radius: 8px; display: none;}
+#rover-photo-wrap{margin-top: 10px;}
