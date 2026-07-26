@@ -1,5 +1,7 @@
 # mars_habitat_simulator
 # 🚀 Mars Habitat Simulator
+<img width="941" height="497" alt="image" src="https://github.com/user-attachments/assets/34c7baf0-6725-4831-9dce-0a3cb37b0c1b" />
+
 
 Inspired by Andy Weir's *The Martian*, this interactive 
 Mars habitat survival simulator models real NASA consumption 
