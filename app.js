@@ -82,8 +82,6 @@ function drawChart(waterHistory, oxygenHistory, foodHistory, energyHistory) {
     })
 }
 
-simInterval = setInterval(runDay, getSpeed())
-
 function getSpeed(){
     const speed = document.getElementById('speedControl').value
     if (speed === 'slow') return 1000
@@ -121,7 +119,7 @@ function finishSim(){
     paused = false
     document.getElementById('runBtn').disabled = false
     document.getElementById('pauseBtn').textContent = '⏸ Pause'
-    if (document.getElementById('status-bridge').textContent === 'ACTIVE'){
+    if (document.getElementById('status-badge').textContent === 'ACTIVE'){
         logMessage('MISSION SUCCESFULL - All crew survived!', 'log-success')
         setStatus('SUCCESS', 'success')
     }
